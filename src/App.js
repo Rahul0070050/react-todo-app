@@ -9,6 +9,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState('');
   const handleSubmit = () => {
+    if (!todo) return;
     setTodos(oldTodos => {
       let allTodos = [...oldTodos, { todo, id: uuidv4(), completed: false }];
       setDatalocaly(allTodos)
